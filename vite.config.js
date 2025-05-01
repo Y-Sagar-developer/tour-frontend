@@ -14,4 +14,7 @@ export default defineConfig({
     assetsDir: 'assets',
     sourcemap: true,
   },
+  server: {
+    historyApiFallback: true,
+  },
 });

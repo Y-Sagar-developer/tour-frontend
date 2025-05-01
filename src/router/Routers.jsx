@@ -17,16 +17,17 @@ const Routers = () => {
   return (
     <Routes>
       <Route path="/" element={<Navigate to="/home" replace />} />
-      <Route path="/home/*" element={<Layout><Home /></Layout>} />
-      <Route path="/about/*" element={<Layout><About /></Layout>} />
-      <Route path="/tours/*" element={<Layout><Tours /></Layout>} />
+      <Route path="/home" element={<Layout><Home /></Layout>} />
+      <Route path="/about" element={<Layout><About /></Layout>} />
+      <Route path="/tours" element={<Layout><Tours /></Layout>} />
       <Route path="/tours/search" element={<Layout><SearchResultList /></Layout>} />
       <Route path="/tours/:id" element={<Layout><TourDetails /></Layout>} />
       <Route path="/tours/:id/booking" element={<Layout><Booking /></Layout>} />
-      <Route path="/login/*" element={<Layout><Login /></Layout>} />
-      <Route path="/register/*" element={<Layout><Register /></Layout>} />
-      <Route path="/thank-you/*" element={<Layout><ThankYou /></Layout>} />
-      <Route path="/booking-success/*" element={<Layout><BookingSuccess /></Layout>} />
+      <Route path="/login" element={<Layout><Login /></Layout>} />
+      <Route path="/register" element={<Layout><Register /></Layout>} />
+      <Route path="/thank-you" element={<Layout><ThankYou /></Layout>} />
+      <Route path="/booking-success" element={<Layout><BookingSuccess /></Layout>} />
+      <Route path="*" element={<Navigate to="/home" replace />} />
     </Routes>
   );
 };
